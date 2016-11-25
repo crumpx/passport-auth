@@ -4,7 +4,7 @@
 **scaffolding created with express-generator**
 
 **used normalize.css and font-awesome.css**
-
+<hr>
 **Check config folder for setup**
 
 **Don't mind the page styling :P**
