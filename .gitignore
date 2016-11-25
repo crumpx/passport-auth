@@ -1,4 +1,4 @@
 node_modules
 temp.js
-config
-.gitignore 
+'config/auth.js'
+
