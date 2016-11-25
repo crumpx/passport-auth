@@ -1,5 +1,5 @@
 node_modules
 temp.js
-config/auth.js
-config/database.js
+/config/auth.js
+/config/database.js
 .gitignore 
