@@ -131,8 +131,6 @@ router.get('/unlink/twitter', function(req, res){
 });
 
 
-
-
 function isLoggedIn(req, res, next){
 	if(req.isAuthenticated()) {
 		return next();

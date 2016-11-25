@@ -4,19 +4,19 @@ block content
 	content
 		.container
 			.form-heading
-				<i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Login
+				h2 <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Login
 				if message.length>0
 					p #{message}
 			.login-form
 				form(action='' method='post')
 					fieldset
-						.form-group.mid-font
+						.form-group.bigger-font
 							.form-label
 								<i class="fa fa-address-book" aria-hidden="true"></i>
 							.form-input 
 								input(type='email' name='email' placeholder='Email')
 
-						.form-group.mid-font
+						.form-group.bigger-font
 							.form-label
 								<i class="fa fa-unlock" aria-hidden="true"></i>
 							.form-input 
@@ -27,6 +27,11 @@ block content
 
 				.misc.right
 					p Need an account? 
-						a(href='/users/signup') Signup!
-					p Or go
-						a(href='/') Home
+						a.underline(href='/users/signup') Signup!
+					p Use social media connect:
+					a(href='/users/auth/facebook')
+						i(aria-hidden="true").fa.fa-facebook-square.large-font.facebook-front.pad-8-r
+					a(href='/users/auth/twitter')
+						i(aria-hidden="true").fa.fa-twitter-square.large-font.twitter-front.pad-8-r
+					a(href='/users/auth/google')
+						i(aria-hidden="true").fa.fa-google.large-font.google-front.pad-8-r

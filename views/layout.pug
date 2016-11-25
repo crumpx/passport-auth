@@ -1,9 +1,24 @@
 doctype html
 html
-  head
-    title= title
-    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css')
-    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
-    link(rel='stylesheet', href='/stylesheets/style.css')
-  body
-    block content
+	head
+		title= title
+		link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css')
+		link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
+		link(rel='stylesheet', href='/stylesheets/style.css')
+	body
+		nav
+			.navbar
+				.brand
+					a(href='/') NightLife
+				.nav-menu
+					if (user)
+						a.menu-item(href='/users/logout') Logout
+					else
+						a.menu-item(href='/users/login') Login
+						a.menu-item(href='/users/signup') Sign Up
+					a.menu-item(href='/users/dashboard') Dashboard
+
+
+
+		block content
+

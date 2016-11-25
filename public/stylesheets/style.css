@@ -1,8 +1,9 @@
-@import https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css;
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface');
 
 
 body {
-  padding: 50px;
+  background-color: #212121;
+  color: white;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
@@ -15,18 +16,63 @@ input {
 	border: 1px solid black;
 }
 
-a, a:hover {
+a, a:hover, a:active {
 	text-decoration: none;
+	color: white;
 }
 
 a[type='button'] {
-	padding: 4px 8px;
+	padding: 4px 6px;
 	color: black;
+}
+
+/*navbar*/
+
+.navbar {
+	height: 60px;
+	background-color: #7B1FA2;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	border-bottom: 1px solid #E1BEE7;
+}
+
+.brand a {
+	font-size: 56px;
+	color: white;
+	font-family: 'Abril Fatface', cursive;
+}
+
+.nav-menu {
+	display: flex;
+	font-size: 14px;
+	flex-direction: row;
+}
+
+.menu-item {
+	padding: 11px 18px;
+	color: white;
+	padding-top: 20px;
+	
+}
+
+.menu-item:hover {
+	border: 1px solid #E1BEE7;
 }
 
 /*utilities*/
 
+.underline {
+	text-decoration: underline;
+}
 
+.pad-4-r {
+	padding-right: 4px;
+}
+
+.pad-8-r {
+	padding-right: 8px;
+}
 
 .right5,
  {
@@ -94,18 +140,43 @@ a[type='button'] {
 	text-decoration: none;
 }
 
+.local {
+	background-color: #9C27B0;
+}
+
 .facebook-icon {
 	background-color: white;
 	color: #3d5a98;
 }
 
-.twitter-icon {
-	background-color: white;
-	color: #1da1f2
+.facebook {
+	background-color: #3d5a98;
 }
 
+.facebook-front {
+	color: #3d5a98 ;
+}
+
+.twitter-icon {
+	background-color: white;
+	color: #1da1f2;
+}
+
+.twitter {
+	background-color: #1da1f2
+}
+
+.twitter-front {
+	color: #1da1f2
+}
 .google-icon {
 	background-color: white;
+	color: #3174f1;
+}
+.google {
+	background-color: #3174f1;
+}
+.google-front {
 	color: #3174f1;
 }
 
@@ -127,12 +198,22 @@ a[type='button'] {
 .profiles {
 	display: flex;
 	flex-direction: column;
+	
 }
 
 .account-list {
-	background-color: #ebeff1;
+	background-color: #E1BEE7;
 	margin-top: 8px;
 	padding: 12px 12px;
+	color: #212121;
 	width: 400px;
 	word-wrap: break-word;
+
+}
+
+.header i{
+	/*background-color:#7C4DFF; */
+	padding: 10px 10px;
+	color: white;
+	border-radius: 6px;
 }

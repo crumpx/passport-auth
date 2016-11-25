@@ -4,7 +4,8 @@ block content
 	content
 		.container
 			.form-heading
-				<i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Sign Up
+				h2 
+					i.fa.fa-arrow-circle-right  Sign Up
 				if message.length>0
 					p #{message}
 			.login-form
@@ -26,7 +27,13 @@ block content
 								<i class="fa fa-lock" aria-hidden="true"></i> Local signup
 
 				.misc.right
+
 					p Already have an account? 
-						a(href='/users/login') Login!
-					p Or go
-						a(href='/') Home
+						a.underline(href='/users/login') Login!
+					p Use social media connect:
+					a(href='/users/auth/facebook')
+						i(aria-hidden="true").fa.fa-facebook-square.large-font.facebook-front.pad-8-r
+					a(href='/users/auth/twitter')
+						i(aria-hidden="true").fa.fa-twitter-square.large-font.twitter-front.pad-8-r
+					a(href='/users/auth/google')
+						i(aria-hidden="true").fa.fa-google.large-font.google-front.pad-8-r
