@@ -1,0 +1,93 @@
+extends ../layout.pug
+
+block content
+	content
+		.container
+			.heading
+				.heading-text
+					h2 Profile
+				.center.logout.tiny-font
+					a(href='logout' type='button') 
+								<i class="fa fa-lock" aria-hidden="true"></i> logout
+		.container
+			if (user.local.id)
+				.profiles
+					.account-list
+						.header
+							<i class="fa fa-user" aria-hidden="true"> Local</i>
+						p 
+							strong id: 
+							| #{user.id}
+							br
+							strong email: 
+							| #{user.local.email}
+							br
+							strong password: 
+							| #{user.local.password}
+			if (user.facebook.id)
+				.profiles
+					.account-list
+						.header
+							<i class="fa fa-user" aria-hidden="true"> Facebook </i>
+						p 
+							img(src= user.facebook.pictureUrl)
+							br
+							strong id: 
+							| #{user.facebook.id}
+							br
+							strong name: 
+							| #{user.facebook.name}
+							br
+							strong email: 
+							| #{user.facebook.email}
+							br
+							strong token: 
+							| #{user.facebook.token}
+			if (user.twitter.id)	
+				.profiles
+					.account-list
+						.header
+							<i class="fa fa-user" aria-hidden="true"> Facebook </i>
+						p 
+							img(src= user.twitter.pictureUrl)
+							br
+							strong ID: 
+							| #{user.twitter.id}
+							br
+							strong Username: 
+							| #{user.twitter.username}
+							br
+							strong Name: 
+							| #{user.twitter.displayName}
+							br
+							strong token: 
+							| #{user.twitter.token}
+
+			if (user.google.id)	
+				.profiles
+					.account-list
+						.header
+							<i class="fa fa-user" aria-hidden="true"> Google </i>
+						p 
+							img(src= user.google.pictureUrl)
+							br
+							strong id: 
+							| #{user.google.id}
+							br
+							strong name: 
+							| #{user.google.displayName}
+							br
+							strong email: 
+							| #{user.google.email}
+							br
+							strong token: 
+							| #{user.google.token}
+
+
+
+
+
+					
+
+
+

@@ -1,0 +1,27 @@
+extends ../layout.pug
+
+block content
+	content
+		.container
+			.heading
+				.heading-text
+					h2 Node Authentication
+				.heading-icon
+					<i class="fa fa-unlock" aria-hidden="true"></i> 		
+			span Login or Signup with:
+			.login-signup-box
+				.login.right5
+					a(type='button' href='/users/login')
+						<i class="fa fa-lock" aria-hidden="true"></i> Local Login
+				.signup.left5
+					a(type='button' href='/users/signup') 
+						<i class="fa fa-lock" aria-hidden="true"></i> Local signup
+		.container
+			p Or use social media login:
+			.social-login
+					a.facebook-icon(type=button href='/users/auth/facebook')
+						i.fa.fa-facebook-square(aria-hidden='true')
+					a.twitter-icon(type=button href='/users/auth/twitter')
+						i.fa.fa-twitter-square(aria-hidden='true')
+					a.google-icon(type=button href='/users/auth/google')
+						i.fa.fa-google(aria-hidden='true')

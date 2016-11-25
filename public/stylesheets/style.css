@@ -1,0 +1,148 @@
+@import https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css;
+
+
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+fieldset {
+	padding: 20px;
+}
+
+input {
+	padding-left: 5px;
+	border: 1px solid black;
+}
+
+/*utilities*/
+
+
+
+.right5,
+ {
+	margin-right: 5px;
+}
+.left5 {
+	margin-left: 5px;
+}
+
+.tiny-font {
+	font-size: 0.5em;
+}
+
+.small-font {
+	font-size: 1em;
+}
+
+.bigger-font {
+	font-size: 1.4em;
+}
+
+.mid-font {
+	font-size: 2em;
+}
+
+.large-font {
+	font-size: 3em;
+}
+
+.right {
+	text-align: right;
+}
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.heading {
+	font-size:3em;
+	text-align: center;
+}
+
+.heading-icon {
+	font-size: 5em;
+}
+
+.login-form {
+	padding-top: 20px;
+}
+
+.login-signup-box {
+	display: flex;
+	padding: 8px 0px;
+}
+
+.login>a, 
+.signup>a,
+.login-form button{
+  text-decoration: none;
+  background-color: #bfd62e;
+  color: black;
+  font-size: 1.4em;
+  padding: 8px 10px;
+  border: 1px solid black;
+  /*border-radius: 8px;*/
+}
+
+.social-login {
+	padding: 12px;
+}
+
+.social-login a {
+	font-size: 2em;
+	padding-left: 4px;
+	padding-right: 4px;
+	text-decoration: none;
+}
+
+.facebook-icon {
+	background-color: white;
+	color: #3d5a98;
+}
+
+.twitter-icon {
+	background-color: white;
+	color: #1da1f2
+}
+
+.google-icon {
+	background-color: white;
+	color: #3174f1;
+}
+
+.logout>a {
+	text-decoration: none;
+	color: black;
+	padding: 4px 8px;
+}
+
+
+.form-heading {
+	font-size: 3em;
+}
+
+.form-group {
+	display: flex;
+	margin: 8px 6px;
+}
+
+.form-label {
+	background-color: #cbcbcb;
+	border: 1px solid black;
+	padding: 0px 8px;
+}
+
+.profiles {
+	display: flex;
+	flex-direction: column;
+}
+
+.account-list {
+	background-color: #ebeff1;
+	margin-top: 8px;
+	padding: 12px 12px;
+	width: 400px;
+	word-wrap: break-word;
+}

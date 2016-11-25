@@ -1,0 +1,32 @@
+extends ../layout.pug
+
+block content
+	content
+		.container
+			.form-heading
+				<i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Login
+				if message.length>0
+					p #{message}
+			.login-form
+				form(action='' method='post')
+					fieldset
+						.form-group.mid-font
+							.form-label
+								<i class="fa fa-address-book" aria-hidden="true"></i>
+							.form-input 
+								input(type='email' name='email' placeholder='Email')
+
+						.form-group.mid-font
+							.form-label
+								<i class="fa fa-unlock" aria-hidden="true"></i>
+							.form-input 
+								input(type='password' name='password' placeholder='Password')
+						.right
+							button(type='submit') 
+								<i class="fa fa-lock" aria-hidden="true"></i> Local Login
+
+				.misc.right
+					p Need an account? 
+						a(href='/users/signup') Signup!
+					p Or go
+						a(href='/') Home
