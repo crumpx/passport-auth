@@ -1,0 +1,30 @@
+extends ../layout.pug
+
+block content
+	content
+		.container
+			.form-heading
+				<i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Add Local Account
+				if message.length>0
+					p #{message}
+			.login-form
+				form(action='' method='post')
+					fieldset
+						.form-group.mid-font
+							.form-label
+								<i class="fa fa-address-book" aria-hidden="true"></i>
+							.form-input 
+								input(type='email' name='email' placeholder='Email')
+
+						.form-group.mid-font
+							.form-label
+								<i class="fa fa-unlock" aria-hidden="true"></i>
+							.form-input 
+								input(type='password' name='password' placeholder='Password')
+						.right
+							button(type='submit') 
+								<i class="fa fa-lock" aria-hidden="true"></i> Add Local
+
+				.misc.right
+					p 
+						a(href='/users/dashboard') Go back to dashboard

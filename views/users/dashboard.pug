@@ -1,6 +1,7 @@
 extends ../layout.pug
 
 block content
+	p #{user}
 	content
 		.container
 			.heading
@@ -10,7 +11,7 @@ block content
 					a(href='logout' type='button') 
 								<i class="fa fa-lock" aria-hidden="true"></i> logout
 		.container
-			if (user.local.id)
+			if (user.local.email)
 				.profiles
 					.account-list
 						.header
@@ -24,7 +25,14 @@ block content
 							br
 							strong password: 
 							| #{user.local.password}
-			if (user.facebook.id)
+						.link-btn
+							a(type='button' href='/unlink/local') Unlink
+			else 
+				.profiles
+					.account-list
+						.link-btn
+							a(type='button' href='connect/local') Connect Local
+			if (user.facebook.token)
 				.profiles
 					.account-list
 						.header
@@ -43,11 +51,19 @@ block content
 							br
 							strong token: 
 							| #{user.facebook.token}
-			if (user.twitter.id)	
+						.link-btn 
+							a(type='button' href='unlink/facebook') Unlink
+			else
+				.profiles
+					.account-list
+						.link-btn 
+							a(type='button' href='connect/facebook') Connect Facebook
+
+			if (user.twitter.token)	
 				.profiles
 					.account-list
 						.header
-							<i class="fa fa-user" aria-hidden="true"> Facebook </i>
+							<i class="fa fa-user" aria-hidden="true"> Twitter </i>
 						p 
 							img(src= user.twitter.pictureUrl)
 							br
@@ -62,8 +78,14 @@ block content
 							br
 							strong token: 
 							| #{user.twitter.token}
-
-			if (user.google.id)	
+						.link-btn 
+							a(type='button' href='unlink/twitter') Unlink
+			else
+				.profiles
+					.account-list
+						.link-btn 
+							a(type='button' href='connect/twitter') Connect Twitter
+			if (user.google.token)	
 				.profiles
 					.account-list
 						.header
@@ -82,8 +104,13 @@ block content
 							br
 							strong token: 
 							| #{user.google.token}
-
-
+						.link-btn 
+							a(type='button' href='unlink/google') Unlink
+			else
+				.profiles
+					.account-list
+						.link-btn 
+							a(type='button' href='connect/google') Connect Google
 
 
 

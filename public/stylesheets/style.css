@@ -15,6 +15,15 @@ input {
 	border: 1px solid black;
 }
 
+a, a:hover {
+	text-decoration: none;
+}
+
+a[type='button'] {
+	padding: 4px 8px;
+	color: black;
+}
+
 /*utilities*/
 
 
@@ -74,18 +83,6 @@ input {
 	padding: 8px 0px;
 }
 
-.login>a, 
-.signup>a,
-.login-form button{
-  text-decoration: none;
-  background-color: #bfd62e;
-  color: black;
-  font-size: 1.4em;
-  padding: 8px 10px;
-  border: 1px solid black;
-  /*border-radius: 8px;*/
-}
-
 .social-login {
 	padding: 12px;
 }
@@ -111,13 +108,6 @@ input {
 	background-color: white;
 	color: #3174f1;
 }
-
-.logout>a {
-	text-decoration: none;
-	color: black;
-	padding: 4px 8px;
-}
-
 
 .form-heading {
 	font-size: 3em;

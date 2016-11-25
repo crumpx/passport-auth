@@ -59,6 +59,80 @@ router.get('/auth/google/callback',
 		failureRedirect: '/'
 	}));
 
+//connect accounts
+
+router.get('/connect/local', function(req, res){
+	res.render('users/connect-local.pug', { message: req.flash('loginMessage') });
+});
+
+router.post('/connect/local', passport.authenticate('local-signup', {
+	successRedirect: '/users/dashboard',
+	failureRedirect: '/users/connect/local',
+	failureFlash: true
+}));
+
+router.get('/connect/facebook', passport.authorize('facebook', { scope: 'email' }));
+
+router.post('/connect/facebook/callback', 
+	passport.authorize('facebook', {
+		successRedirect: '/users/dashboard',
+		failureRedirect: '/'
+	}));
+
+router.get('/connect/twitter', passport.authorize('twitter'));
+
+router.post('/connect/twitter/callback',
+ passport.authorize('twitter', {
+ 	successRedirect: '/user/dashboard',
+ 	failureRedirect: '/'
+}));
+
+router.get('/connect/google', passport.authorize('google', {scope:'email'}));
+
+router.post('/connect/google/callback',
+	passport.authorize('google', {
+		successRedirect: '/user/dashboard',
+		failureRedirect: '/'
+	}));
+
+// unlink accounts
+
+router.get('/unlink/local', function(req, res){
+	var user = req.user;
+	user.local.mail = undefined;
+	user.local.password = undefined;
+	user.save(function(err){
+		res.redirect('/users/dashboard');
+	});
+});
+
+router.get('/unlink/facebook', function(req, res){
+	var user = req.user;
+	user.facebook.token = undefined;
+	user.save(function(err){
+		res.redirect('/users/dashboard');
+	});
+});
+
+router.get('/unlink/google', function(req, res){
+	var user = req.user;
+	user.google.token = undefined;
+	user.save(function(err){
+		res.redirect('/users/dashboard');
+	});
+});
+
+router.get('/unlink/twitter', function(req, res){
+	var user = req.user;
+	user.twitter.token = undefined;
+	user.save(function(err){
+		res.redirect('/users/dashboard');
+	});
+});
+
+
+
+
 function isLoggedIn(req, res, next){
 	if(req.isAuthenticated()) {
 		return next();
